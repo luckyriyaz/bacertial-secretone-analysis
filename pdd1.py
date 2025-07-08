@@ -7,7 +7,7 @@ st.set_page_config(page_title="Bacterial Secretome Web Tool", layout="wide")
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_excel("Bacterial_Secretome_Database_2600.csv", engine="openpyxl")
+        df = pd.read_excel("Bacterial_Secretome_Database_2600.xlsx", engine="openpyxl")
         return df
     except FileNotFoundError:
         st.error("❌ Dataset not found! Please ensure the Excel file is in the same folder as this app.")
