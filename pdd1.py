@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from openpyxl import load_workbook, Workbook
 
 # === 1. Create a new Excel file ===
 wb = Workbook()
