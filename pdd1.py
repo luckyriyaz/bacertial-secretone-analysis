@@ -1,29 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-# === 1. Create a new Excel file ===
-wb = Workbook()
-ws = wb.active
-ws.title = "MySheet"
-
-# Add some data
-ws['A1'] = "Name"
-ws['B1'] = "Score"
-ws.append(["Alice", 90])
-ws.append(["Bob", 85])
-
-# Save it
-wb.save("sample.xlsx")
-print("Excel file 'sample.xlsx' created successfully.")
-
-# === 2. Load and Read the Excel file ===
-wb2 = load_workbook("sample.xlsx")
-ws2 = wb2.active
-
-print("\nReading from 'sample.xlsx':")
-for row in ws2.iter_rows(min_row=1, max_col=2, max_row=3, values_only=True):
-    print(row)
-
 st.set_page_config(page_title="Bacterial Secretome Web Tool", layout="wide")
 
 # Load the dataset with error handling
